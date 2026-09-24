@@ -1,0 +1,19 @@
+[package]
+name = "mq-strategies"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Strategy contracts and relative-value logic (basis / stat-arb / NSE-BSE) — horizon is config"
+
+[dependencies]
+mq-core = { path = "../core" }
+mq-orderbook = { path = "../orderbook" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+rust_decimal.workspace = true
+anyhow.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true

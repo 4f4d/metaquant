@@ -1,0 +1,58 @@
+# Python / cache / build (local)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+.env
+.ENV
+*.egg-info/
+dist/
+build/
+.uv/
+*.parquet
+*.arrow
+.hypothesis/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+coverage.xml
+htmlcov/
+
+# Rust
+/target/
+**/target/
+
+# Node / Frontend
+node_modules/
+web/dist/
+web/build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Secrets / local config
+.env
+*.env.local
+configs/*.toml
+!configs/*.example.toml
+secrets/
+
+# Operational / data
+data/raw/
+data/cache/
+*.db
+*.duckdb
+
+# Logs / reports
+logs/
+reports/
+
+# OS
+.DS_Store

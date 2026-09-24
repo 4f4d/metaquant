@@ -1,0 +1,50 @@
+[workspace]
+members = [
+    "crates/core",
+    "crates/market-data",
+    "crates/orderbook",
+    "crates/strategies",
+    "crates/execution",
+    "crates/risk",
+    "crates/adapters",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2024"
+version = "0.1.0"
+authors = ["META QUANT"]
+license = "Apache-2.0"
+repository = "https://github.com/metaquant/metaquant"
+rust-version = "1.85"
+
+[workspace.dependencies]
+# Core
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "2.0"
+rust_decimal = { version = "1.36", features = ["serde-with-str"] }
+tokio = { version = "1.38", features = ["full"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+config = "0.14"
+toml = "0.8"
+
+# Arrow / Parquet interop (interchange, not hot-path book)
+arrow = { version = "53", features = ["prettyprint"] }
+parquet = { version = "53", features = ["arrow"] }
+
+anyhow = "1.0"
+
+# Testing / bench
+proptest = "1.5"
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[profile.dev]
+panic = "abort"
+
+[profile.release]
+panic = "abort"
+lto = "thin"
+codegen-units = 1

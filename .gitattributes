@@ -1,0 +1,4 @@
+*.parquet binary
+*.arrow binary
+*.pyc binary
+*.lock text eol=lf

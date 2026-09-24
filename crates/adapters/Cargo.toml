@@ -1,0 +1,17 @@
+[package]
+name = "mq-adapters"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "BrokerAdapter and feed adapters — PAPER/BACKTEST/SHADOW default; LIVE deferred"
+
+[dependencies]
+mq-core = { path = "../core" }
+mq-execution = { path = "../execution" }
+serde.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+tokio.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true

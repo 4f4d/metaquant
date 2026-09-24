@@ -1,0 +1,31 @@
+# Basis arbitrage — example (copy to basis.toml; do not commit real values)
+[strategy]
+id = "basis"
+horizon = "intraday"  # intraday | short_term | medium_term (ADR-009)
+instruments = ["RELIANCE", "RELIANCE-FUT"]
+fair_basis_model = "carry"  # carry | regression
+min_deviation_bps = 15
+max_holding_bars = 78  # e.g. intraday bars
+cost_model = "basis_cost_v1"
+
+[cost]
+exchange_charges_bps = 2.0
+brokerage_bps = 1.0
+slippage_bps = 3.0
+financing_bps_per_day = 1.5
+
+[risk]
+max_position = 10000
+max_gross_exposure = 1_000_000
+max_order_notional_ticks = 500_000
+kill_switch = false
+
+[auction]
+enabled = true
+cas_window = "15:15-15:35"  # IST; rule is configurable (ADR-010)
+use_reference_vwap = true
+use_imbalance = true
+
+[reproducibility]
+dataset_version = "nse_bhav_2025_09_v1"
+strategy_version = "basis_v0.1"

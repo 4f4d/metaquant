@@ -1,0 +1,27 @@
+# Statistical arbitrage — example (copy to stat_arb.toml; do not commit)
+[strategy]
+id = "stat_arb"
+horizon = "short_term"  # intraday | short_term | medium_term
+universe = ["RELIANCE", "TCS", "INFY", "HDFCBANK"]
+hedge_model = "rolling_ols"  # static_ols | rolling_ols | kalman
+entry_z = 2.0
+exit_z = 0.5
+stop_z = 4.0
+max_holding_bars = 390
+
+[hedge]
+rolling_window = 60
+kalman_enabled = false  # statsmodels state-space where practical (TECH_STACK)
+
+[cost]
+exchange_charges_bps = 2.0
+slippage_bps = 5.0
+
+[risk]
+max_position = 5000
+max_gross_exposure = 800_000
+kill_switch = false
+
+[reproducibility]
+dataset_version = "nse_eq_2025_09_v1"
+strategy_version = "stat_arb_v0.1"

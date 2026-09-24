@@ -1,0 +1,15 @@
+[package]
+name = "mq-orderbook"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Order-book representation — native Rust structures (not Arrow/Parquet on hot path)"
+
+[dependencies]
+mq-core = { path = "../core" }
+serde.workspace = true
+thiserror.workspace = true
+rust_decimal.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true

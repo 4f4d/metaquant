@@ -1,0 +1,24 @@
+# Paper / shadow run — example (copy to paper.toml; do not commit)
+[run]
+mode = "paper"  # paper | shadow | backtest (live is deferred)
+instruments = ["RELIANCE"]
+start = "2025-09-01T00:00:00Z"
+end = "2025-09-24T00:00:00Z"
+
+[feed]
+type = "historical"  # historical | live_paper
+data_root = "./data"
+
+[execution]
+mode = "simulated"  # simulated only until BrokerAdapter live is approved
+
+[broker]
+# Secrets are never here — use env var names.
+api_key_env = "BROKER_API_KEY"  # export BROKER_API_KEY=...
+
+[db]
+url_env = "DATABASE_URL"  # e.g. postgres://metaquant:metaquant@localhost:5432/metaquant
+
+[observability]
+log_level = "info"
+metrics_enabled = true

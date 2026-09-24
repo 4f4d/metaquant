@@ -1,0 +1,15 @@
+[project]
+name = "mq-api"
+version = "0.1.0"
+description = "META QUANT control/API plane — FastAPI (not the market-event hot path)"
+requires-python = "==3.12.*"
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "pydantic>=2.7",
+    "meta-quant",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

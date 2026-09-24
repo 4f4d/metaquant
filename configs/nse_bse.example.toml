@@ -1,0 +1,28 @@
+# NSE-BSE cross-exchange — example (copy to nse_bse.toml; do not commit)
+[strategy]
+id = "nse_bse"
+horizon = "intraday"
+instrument = "RELIANCE"  # same symbol on both venues
+min_spread_bps = 8
+max_legging_ms = 500
+max_holding_bars = 10
+
+[execution]
+venue_a = "NSE"
+venue_b = "BSE"
+timestamp_alignment = "exchange_ns"  # requires reliable exchange timestamp (STRATEGY_SPEC sec 4)
+liquidity_check = true
+slippage_bps = 4.0
+
+[cost]
+exchange_charges_bps = 2.5
+stamp_duty_bps = 0.5
+slippage_bps = 4.0
+
+[risk]
+max_position = 2000
+kill_switch = false
+
+[reproducibility]
+dataset_version = "nse_bse_ticks_2025_09_v1"
+strategy_version = "nse_bse_v0.1"
