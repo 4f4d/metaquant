@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 //! mq-risk — deterministic risk engine, authoritative over all model outputs (ADR-006).
 
 use mq_core::{Opportunity, RiskDecision, TimestampNs};

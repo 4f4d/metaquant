@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 //! mq-orderbook — native Rust order-book (hot path is not Arrow/Parquet).
 
 use thiserror::Error;

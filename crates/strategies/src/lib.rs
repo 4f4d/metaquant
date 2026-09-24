@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 //! mq-strategies — common strategy contract + placeholder family modules.
 //! Horizon is a configuration property (ADR-009); CAS is a regime, not a strategy (ADR-010).
 

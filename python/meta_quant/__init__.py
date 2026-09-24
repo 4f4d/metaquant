@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: Apache-2.0
 """META QUANT — Python research/ML/analytics plane.
 
 Python owns research, statistics, feature engineering, training, batch analytics,

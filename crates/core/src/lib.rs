@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 //! mq-core — canonical event types, clock, and market-state contracts.
 //! So that the one event model (ADR-003) is shared across backtest/paper/shadow/live.
 

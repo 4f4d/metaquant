@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: Apache-2.0
 """Reproducibility helper — records experiment metadata (MQ-FR-013)."""
 
 from __future__ import annotations

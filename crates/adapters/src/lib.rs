@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: Apache-2.0
 //! mq-adapters — BrokerAdapter boundary (INTERFACES sec 8).
 //! Default is simulated; live is deferred and requires separate approval.
 
