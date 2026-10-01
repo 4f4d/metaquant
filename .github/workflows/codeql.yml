@@ -19,7 +19,7 @@ jobs:
         language: [python, javascript]
         # Rust is not yet in the CodeQL default set; analyze Python/JS now; add Rust via third-party queries if desired later.
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: github/codeql-action/init@v3
         with: { languages: "${{ matrix.language }}" }
       - uses: github/codeql-action/analyze@v3
