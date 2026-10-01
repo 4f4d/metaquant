@@ -32,7 +32,7 @@ config = "0.14"
 toml = "0.8"
 
 # Arrow / Parquet interop (interchange, not hot-path book)
-arrow = { version = "53", features = ["prettyprint"] }
+arrow = { version = "54", features = ["prettyprint"] }
 parquet = { version = "53", features = ["arrow"] }
 
 anyhow = "1.0"
